@@ -3,20 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Photo Gallery</title>
+    <title>Advanced Interactive Photo Gallery</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div id="image">
-        Hover over an image below to display here.
-    </div>
+    <main>
+        <h1>Advanced Interactive Photo Gallery</h1>
 
-    <div class="preview-container">
-        <img class="preview" alt="Cánh đồng hoa hướng dương rực rỡ" src="https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=500" onmouseover="upDate(this)" onmouseout="undo()">
-        <img class="preview" alt="Ngọn núi phủ tuyết trắng xóa" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=500" onmouseover="upDate(this)" onmouseout="undo()">
-        <img class="preview" alt="Bãi biển hoàng hôn thơ mộng" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500" onmouseover="upDate(this)" onmouseout="undo()">
-    </div>
+        <div id="image" aria-live="polite">
+            Hover over an image below or use Tab key to display here.
+        </div>
+
+        <section class="preview-container" aria-label="Photo Gallery">
+            
+            <img class="preview" alt="Cánh đồng hoa hướng dương rực rỡ" 
+                 src="https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=500" 
+                 onmouseover="upDate(this)" onmouseleave="undo()" 
+                 onfocus="upDate(this)" onblur="undo()">
+
+            <img class="preview" alt="Ngọn núi phủ tuyết trắng xóa" 
+                 src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=500" 
+                 onmouseover="upDate(this)" onmouseleave="undo()" 
+                 onfocus="upDate(this)" onblur="undo()">
+
+            <img class="preview" alt="Bãi biển hoàng hôn thơ mộng" 
+                 src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500" 
+                 onmouseover="upDate(this)" onmouseleave="undo()" 
+                 onfocus="upDate(this)" onblur="undo()">
+
+            <img class="preview" alt="Rừng cây mùa thu lá vàng" 
+                 src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=500" 
+                 onmouseover="upDate(this)" onmouseleave="undo()" 
+                 onfocus="upDate(this)" onblur="undo()">
+
+            <img class="preview" alt="Thành phố lên đèn về đêm" 
+                 src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=500" 
+                 onmouseover="upDate(this)" onmouseleave="undo()" 
+                 onfocus="upDate(this)" onblur="undo()">
+
+            <img class="preview" alt="Chú mèo con dễ thương" 
+                 src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=500" 
+                 onmouseover="upDate(this)" onmouseleave="undo()" 
+                 onfocus="upDate(this)" onblur="undo()">
+
+        </section>
+    </main>
 
     <script src="script.js"></script>
 </body>
